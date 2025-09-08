@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TXT Folder Merger</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>TXT Folder Merger</h1>
+        <form id="upload-form" enctype="multipart/form-data">
+            <div id="drop-zone">Drag & Drop a Folder Here</div>
+            <div id="file-info" class="hidden"></div>
+            <input type="file" id="file-input" name="files[]" multiple webkitdirectory directory hidden>
+            <button type="submit">Merge Files</button>
+        </form>
+        <div id="result"></div>
+        <div class="dev-by">
+            Developed by
+            <a class="william" href="http://william-strategy.com" target="_blank">William's Great Strategy</a>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
